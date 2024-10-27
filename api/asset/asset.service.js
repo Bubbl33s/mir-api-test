@@ -1,23 +1,23 @@
 const assets = [
   {
-    id: '1',
-    name: 'Asset 1',
+    id: 1,
+    name: "Asset 1",
     price: 100,
-    slug: 'asset-1',
-    image: 'https://via.placeholder.com/150',
-    tokenAssetAddress: 'BQhCiUcQfDgoLLx6XUf6ne7kYe5YE8ZKMHpJ9j2yaW5N',
-    createdAt: '2021-01-01T00:00:00.000Z',
-    updatedAt: '2021-01-01T00:00:00.000Z',
+    slug: "asset-1",
+    image: "https://via.placeholder.com/150",
+    tokenAssetAddress: "BQhCiUcQfDgoLLx6XUf6ne7kYe5YE8ZKMHpJ9j2yaW5N",
+    createdAt: "2021-01-01T00:00:00.000Z",
+    updatedAt: "2021-01-01T00:00:00.000Z",
   },
   {
-    id: '2',
-    name: 'Asset 2',
+    id: 2,
+    name: "Asset 2",
     price: 200,
-    slug: 'asset-2',
-    image: 'https://via.placeholder.com/150',
-    tokenAssetAddress: 'BW7AjDhWJmdH7fsf8s7UkSaYm5CtvmUDjm5V7xy4jakh',
-    createdAt: '2021-01-01T00:00:00.000Z',
-    updatedAt: '2021-01-01T00:00:00.000Z',
+    slug: "asset-2",
+    image: "https://via.placeholder.com/150",
+    tokenAssetAddress: "BW7AjDhWJmdH7fsf8s7UkSaYm5CtvmUDjm5V7xy4jakh",
+    createdAt: "2021-01-01T00:00:00.000Z",
+    updatedAt: "2021-01-01T00:00:00.000Z",
   },
 ];
 
@@ -65,7 +65,7 @@ function updateAsset(id, asset) {
 }
 
 function deleteAsset(id) {
-  const asset = assets.find((asset) => asset.id === id);
+  const asset = assets.find((asset) => asset.id === Number(id));
 
   if (!asset) {
     return null;

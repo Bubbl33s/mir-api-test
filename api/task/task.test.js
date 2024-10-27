@@ -8,6 +8,12 @@ describe("Tasks API", () => {
     expect(response.body).toBeInstanceOf(Array);
   });
 
+  it("should get a task by id", async () => {
+    const response = await request(app).get("/api/tasks/1");
+    expect(response.statusCode).toBe(200);
+    expect(response.body.id).toBe(1);
+  });
+
   it("should create a new task", async () => {
     const newTask = {
       title: "New Task",
